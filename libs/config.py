@@ -22,6 +22,7 @@ class Config:
     # App Settings
     #ENVIRONMENT = os.environ.get("APP_ENV", "development")
     #PORT = int(os.environ.get("PORT", 8080))
+    LogLevel=os.environ.get("LOG_LEVEL", "INFO")  # Default to INFO if not set
 
     @classmethod
     def validate(cls):
