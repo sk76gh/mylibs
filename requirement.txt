@@ -1,0 +1,5 @@
+# For reading local environment variables 
+python-dotenv
+
+# Gemini API SDK
+google-genai
