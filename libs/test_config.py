@@ -15,10 +15,10 @@ class TestConfig(unittest.TestCase):
     def test_config_loads_successfully_when_env_exists(self):
         """Test that Config successfully initializes when keys are present."""
         # Dynamically import config after mocking os.environ
-        import config
+        from .config import Config
         
-        self.assertEqual(config.Config.GEMINI_API_KEY, "mock_gemini_key_12345")
-        #self.assertEqual(config.Config.ENVIRONMENT, "development") # checks fallback default
+        self.assertEqual(Config.GEMINI_API_KEY, "mock_gemini_key_12345")
+        #self.assertEqual(Config.ENVIRONMENT, "development") # checks fallback default
 
     @patch.dict(os.environ, {}) # Force environment to be completely empty
     def test_config_raises_value_error_when_key_missing(self):
@@ -29,7 +29,7 @@ class TestConfig(unittest.TestCase):
             
         # Expecting a ValueError to be thrown the moment 'config' is imported
         with self.assertRaises(ValueError) as context:
-            import config
+            from .config import Config  # Importing Config will trigger validation
             
         self.assertIn("Missing critical environment secrets", str(context.exception))
 
