@@ -22,15 +22,19 @@ jobs:
       with:
         python-python-version: '3.14.2' # Match your local Python version
 
-    # 3. Installs dependencies if you have them (e.g., python-dotenv)
+    # 3. ONLY installs dependencies if this run is a Pull Request
     - name: Install dependencies
+      if: github.event_name == 'pull_request'  # 👈 Condition
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    # 4. Executes the exact terminal command you ran in your Codespace
+    # 3. ONLY executes unit tests if this run is a direct Push
     - name: Run Unit Tests
+      if: github.event_name == 'push'          # 👈 Condition
       env:
-          PYTHONPATH: libs  # 👈 This tells Python to look inside the libs folder for imports
+        PYTHONPATH: libs
       run: |
         python -m unittest libs/test_config.py
+
+    
