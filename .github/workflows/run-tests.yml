@@ -30,5 +30,7 @@ jobs:
 
     # 4. Executes the exact terminal command you ran in your Codespace
     - name: Run Unit Tests
+      env:
+          PYTHONPATH: libs  # 👈 This tells Python to look inside the libs folder for imports
       run: |
-        python -m unittest test_config.py
+        python -m unittest libs/test_config.py
