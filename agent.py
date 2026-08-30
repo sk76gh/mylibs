@@ -6,7 +6,7 @@ class Agent:
     def __init__(self, name, role):
         self.name = name
         self.role = role
-        self.key=Config.OPENAI_API_KEY
+        self.key=Config.GEMINI_API_KEY
         
 
     def perform_action(self):
