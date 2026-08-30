@@ -3,3 +3,8 @@ python-dotenv
 
 # Gemini API SDK
 google-genai
+
+#langchain
+langchain_openai
+langchain_huggingface
+langchain_google_genai

@@ -1,6 +1,6 @@
 import logging
 import sys
-from config import Config
+from .config import Config
 
 # It's generally better to configure logging once. For this scenario, we will configure
 # the specific logger to prevent duplicate handlers and propagation.
