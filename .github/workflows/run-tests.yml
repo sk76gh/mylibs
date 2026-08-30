@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-python-version: '3.11' # Match your local Python version
+        python-python-version: '3.14.2' # Match your local Python version
 
     # 3. Installs dependencies if you have them (e.g., python-dotenv)
     - name: Install dependencies
