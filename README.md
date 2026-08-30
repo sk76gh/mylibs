@@ -1,0 +1,2 @@
+# PersA
+Agentic assistant
