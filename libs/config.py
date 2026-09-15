@@ -15,7 +15,7 @@ class Config:
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
     HF_API_KEY = os.environ.get("HUGGINGFACEHUB_API_TOKEN")  # Hugging Face API Key
-    
+    OLLAMA_API_KEY = os.environ.get("OLLAMA_API_KEY")
     # Database Settings
     DB_URL = os.environ.get("DATABASE_URL", "sqlite:///default.db") # Keeps a default fallback
     
