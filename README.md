@@ -1,4 +1,3 @@
-# PersA
-Agentic assistant
+# mylibs
+personal collection of reusable python codes 
 
-Personal Ass. to help you in your daily life
