@@ -2,11 +2,13 @@
 python-dotenv
 
 # Gemini API SDK
-google-genai
+google-auth==2.58.0
+google-genai==2.23.0
 
 #langchain
-langchain_core
-langchain_openai
-langchain_huggingface
-langchain_google_genai
-langchain_ollama
+langchain-core==1.6.3
+langchain-google-genai==4.4.0
+langchain-huggingface==1.2.2
+langchain-ollama==1.1.0
+langchain-openai==1.6.2
+langchain-protocol==0.0.19
