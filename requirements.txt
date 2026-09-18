@@ -1,2 +1,12 @@
 # For reading local environment variables 
 python-dotenv
+
+# Gemini API SDK
+google-genai
+
+#langchain
+langchain_core
+langchain_openai
+langchain_huggingface
+langchain_google_genai
+langchain_ollama
