@@ -26,10 +26,12 @@ class Config:
 
     @classmethod
     def validate(cls):
+        print(cls.__dict__)
         """Optional: Ensures critical secrets are not missing before the app starts."""
         missing = [key for key in ["GEMINI_API_KEY"] if not getattr(cls, key)]
+        print(f"Missing---: {missing}")
         if missing:
             raise ValueError(f"❌ Missing critical environment secrets: {', '.join(missing)}")
 
 # Validate secrets as soon as this file is imported anywhere in your project
-Config.validate()
+#Config.validate()  # Uncomment this line to enforce validation on import
