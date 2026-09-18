@@ -35,6 +35,6 @@ jobs:
       env:
         PYTHONPATH: libs
       run: |
-        python -m unittest libs/test_config.py
+        python -m unittest mylibs/test_config.py
 
     
