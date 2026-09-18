@@ -33,7 +33,7 @@ jobs:
     - name: Run Unit Tests
       if: github.event_name == 'push'          # 👈 Condition
       env:
-        PYTHONPATH: libs
+        PYTHONPATH: mylibs
       run: |
         python -m unittest mylibs/test_config.py
 
